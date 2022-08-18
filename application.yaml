@@ -1,12 +1,12 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: k8s-web-hello-app
+  name: k8s-web-hello
   namespace: argocd
 spec:
   destination: 
     server: https://kubernetes.default.svc
-    namespace: k8s-web-hello
+    namespace: k8s-web-hello-app
   syncPolicy:
     syncOptions:
       - "CreateNamespace=true"
