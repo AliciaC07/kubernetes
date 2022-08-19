@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: k8s-web-hello
-        image: aliciac07/k8s-web-hello
+        image: aliciac07/k8s-web-hello:3.0.0
         resources:
           limits:
             memory: "128Mi"
