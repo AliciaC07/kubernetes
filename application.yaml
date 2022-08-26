@@ -1,12 +1,12 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: photo-phactory
+  name: testing-angular
   namespace: argocd
 spec:
   destination: 
     server: https://kubernetes.default.svc
-    namespace: photo-phactory
+    namespace: testing-angular
   syncPolicy:
     syncOptions:
       - "CreateNamespace=true"

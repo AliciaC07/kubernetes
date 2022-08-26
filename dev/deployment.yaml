@@ -1,23 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: photo-phactory
+  name: testing-angular
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: photo-phactory
+      app: testing-angular
   template:
     metadata:
       labels:
-        app: photo-phactory
+        app: testing-angular
     spec:
       containers:
-      - name: photo-phactory
-        image: dreamy236/photo-phactory:latest
+      - name: testing-angular
+        image: bharathirajatut/angular-app
         resources:
           limits:
             memory: "128Mi"
             cpu: "500m"
         ports:
-        - containerPort: 4200
+        - containerPort: 80
