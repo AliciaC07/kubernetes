@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: testing-angular
+  name: k8s-web-hello
 spec:
   type: LoadBalancer
   selector:
-    app: testing-angular
+    app: k8s-web-hello
   ports:
-  - port: 4044
-    targetPort: 4200
+  - port: 3030
+    targetPort: 3000
