@@ -1,12 +1,12 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: k8s-web-hello
+  name: photo-phactory
   namespace: argocd
 spec:
   destination: 
     server: https://kubernetes.default.svc
-    namespace: k8s-web-hello-app
+    namespace: photo-phactory
   syncPolicy:
     syncOptions:
       - "CreateNamespace=true"
