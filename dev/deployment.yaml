@@ -14,10 +14,10 @@ spec:
     spec:
       containers:
       - name: k8s-web-hello
-        image: bharathirajatut/angular-app
+        image: aliciac07/k8s-web-hello
         resources:
           limits:
             memory: "128Mi"
             cpu: "500m"
         ports:
-        - containerPort: 80
+        - containerPort: 3000
