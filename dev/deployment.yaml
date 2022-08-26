@@ -1,23 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: k8s-web-hello
+  name: photo-phactory
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: k8s-web-hello
+      app: photo-phactory
   template:
     metadata:
       labels:
-        app: k8s-web-hello
+        app: photo-phactory
     spec:
       containers:
-      - name: k8s-web-hello
-        image: aliciac07/k8s-web-hello
+      - name: photo-phactory
+        image: dreamy236/photo-phactory:latest
         resources:
           limits:
             memory: "128Mi"
             cpu: "500m"
         ports:
-        - containerPort: 3000
+        - containerPort: 4200
