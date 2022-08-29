@@ -2,15 +2,15 @@ FROM node:alpine
 
 WORKDIR /app
 
+EXPOSE 3000
+
 ENV PORT=3000
 ENV SECOND_MESSAGE = "This is another test..."
-
-EXPOSE 3000
 
 COPY package.json package-lock.json ./
 
 RUN npm install
 
-COPY . /app
+COPY . ./
 
 CMD ["npm", "start"]
