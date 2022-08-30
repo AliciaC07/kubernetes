@@ -41,3 +41,8 @@ jobs:
            context: ./k8s-web-hello
            push: true
            tags: ${{ env.IMAGE_NAME }}:latest, ${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }}
+       - name: Replace Action
+         uses: datamonsters/replace-action@v2
+         with:
+           files: ./dev/deployment.yaml
+           replacements: '$IMAGE=${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }}'

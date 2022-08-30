@@ -13,8 +13,11 @@ spec:
         app: k8s-web-hello
     spec:
       containers:
+      - env:
+         - name: IMAGE_DOCKER
+           value: aliciac07/kubernetes-k8s
       - name: k8s-web-hello
-        image: aliciac07/k8s-web-hello
+        image: $IMAGE_DOCKER
         resources:
           limits:
             memory: "128Mi"
