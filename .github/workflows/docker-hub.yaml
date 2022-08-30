@@ -48,6 +48,7 @@ jobs:
            include: "./k8s-web-hello/testing.yaml"
            find: "aliciac07/k8s-web-hello"
            replace: ${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }}
+           regex: false
        - name: Push changes
          uses: ad-m/github-push-action@v0.6.0
          with:
