@@ -7,6 +7,8 @@ on:
   # run it during pull request
   pull_request:
   
+  workflow_dispatch:
+  
 
 env:
   IMAGE_NAME: aliciac07/k8s-web
