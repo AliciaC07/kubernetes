@@ -18,6 +18,13 @@ app.get("/testing", (req, res)=>{
 
 })
 
+app.get("/second", (req, res)=>{
+    const helloMessage = `Testing endpoint: Hello from the ${os.hostname()}`
+    console.log(helloMessage)
+    res.send(helloMessage)
+
+})
+
 app.listen(PORT, ()=> {
     console.log(`Web server is listening at port ${PORT}`)
 })
