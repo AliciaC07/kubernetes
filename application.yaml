@@ -1,12 +1,12 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: testing-angular
+  name: k8s-web-app
   namespace: argocd
 spec:
   destination: 
     server: https://kubernetes.default.svc
-    namespace: testing-angular
+    namespace: k8s-web-app
   syncPolicy:
     syncOptions:
       - "CreateNamespace=true"
